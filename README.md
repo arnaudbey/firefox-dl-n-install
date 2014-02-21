@@ -10,7 +10,10 @@ Clone the projet
 > cd ff-nightly-dl-and-install
 
 if you want to run this script later from anywhere
-> sudo ln -s ./ff-nightly_dl_and_install.sh /usr/bin/firefox-nightly-update
+
+> sudo cp ff-nightly_dl_and_install.sh /opt/firefox-nightly-update.sh
+
+> sudo ln -s /opt/firefox-nightly-update.sh /usr/local/bin/firefox-nightly-update
 
 launch the script
 > sh ./ff-nightly_dl_and_install.sh
