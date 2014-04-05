@@ -3,9 +3,9 @@
 ## Download the version depending the OS. 32 / 64 b
 if [ "uname -m | grep i686" ] 
 then 
-wget -P /tmp/ff-nightly/ $(wget -O - http://nightly.mozilla.org | egrep -o 'href=.*?linux-i686\.tar\.bz2.*?['"'"'"]' | sed -e 's/^href=//' -e 's/["'"'"']//g')
+	wget -P /tmp/ff-nightly/ $(wget -O - http://nightly.mozilla.org | egrep -o 'href=.*?firefox.*?linux-i686\.tar\.bz2.*?['"'"'"]' | sed -e 's/^href=//' -e 's/["'"'"']//g')
 else
-wget -P /tmp/ff-nightly/ $(wget -O - http://nightly.mozilla.org | egrep -o 'href=.*?linux-x86_64\.tar\.bz2.*?['"'"'"]' | sed -e 's/^href=//' -e 's/["'"'"']//g')
+	wget -P /tmp/ff-nightly/ $(wget -O - http://nightly.mozilla.org | egrep -o 'href=.*?firefox.*?linux-x86_64\.tar\.bz2.*?['"'"'"]' | sed -e 's/^href=//' -e 's/["'"'"']//g')
 fi
 
 ## create opt/firefox-nightly
