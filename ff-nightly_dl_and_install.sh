@@ -8,8 +8,6 @@ else
 	wget -P /tmp/ff-nightly/ $(wget -q -O - http://nightly.mozilla.org | egrep -o 'href=.*?firefox.*?linux-x86_64\.tar\.bz2.*?['"'"'"]' | sed -e 's/^href=//' -e 's/["'"'"']//g')
 fi
 
-exit
-
 ## create opt/firefox-nightly
 if [ ! -d "/opt/firefox-nightly" ] 
 then
