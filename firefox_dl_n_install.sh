@@ -12,7 +12,7 @@ if  uname -m| grep -q "i686" ; then
 	ARCHI_SHORT=""
 else
 	ARCHI="x86_64"
-	ARCHI_SHORT= "64"
+	ARCHI_SHORT="64"
 fi
 
 if [ $CHOICE = 1 ]; then
