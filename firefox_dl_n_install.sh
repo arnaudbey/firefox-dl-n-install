@@ -23,7 +23,7 @@ elif [ $CHOICE = 2 ]; then
 	URL=$(wget -q -O - https://www.mozilla.org/en-US/firefox/beta/all/ | egrep -o "href=.*?os=linux${ARCHI_SHORT}&amp;lang=en-US['"'"'"]" | sed -e 's/\&amp;/\&/g' -e 's/^href=//' -e 's/["'"'"']//g' )
 elif [ $CHOICE = 3 ]; then
 	RELEASE="-aurora"
-	URL=$(wget -q -O - https://www.mozilla.org/en-US/firefox/aurora/all/ | egrep -o "href=.*?firefox.*?en-US.linux-${ARCHI}\.tar\.bz2['"'"'"]" | sed -e 's/^href=//' -e 's/["'"'"']//g')
+	URL=$(wget -q -O - https://www.mozilla.org/en-US/firefox/developer/all/ | egrep -o "href=['"'"'"].*?download.mozilla.org.*?firefox-aurora-latest-ssl.*?linux${ARCHI_SHORT}.*?en-US['"'"'"]" | sed -e 's/\&amp;/\&/g' -e 's/^href=//' -e 's/["'"'"']//g')
 elif [ $CHOICE = 4 ]; then
 	URL=$(wget -q -O - http://nightly.mozilla.org | egrep -o "href=.*?firefox.*?linux-${ARCHI}\.tar\.bz2['"'"'"]" | sed -e 's/^href=//' -e 's/["'"'"']//g')
 	RELEASE="-nightly"
